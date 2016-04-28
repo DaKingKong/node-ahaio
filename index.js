@@ -13,6 +13,7 @@ var initiative = require('./lib/initiative');
 var requirement = require('./lib/requirement');
 var page = require('./lib/page');
 var customObjectRecord = require('./lib/customObjectRecord');
+var integration = require('./lib/integration');
 
 /**
  *
@@ -56,6 +57,7 @@ function Client(username, password, subdomain, options) {
     Client.prototype.requirement = requirement(this);
     Client.prototype.page = page(this);
     Client.prototype.customObjectRecord = customObjectRecord(this);
+    Client.prototype.integration = integration(this);
 
 }
 
