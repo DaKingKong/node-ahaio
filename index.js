@@ -3,9 +3,9 @@
 const request = require('request');
 const _ = require('lodash');
 
-var product = require('./resources/product');
-var release = require('./resources/release');
-var feature = require('./resources/feature');
+var product = require('./lib/product');
+var release = require('./lib/release');
+var feature = require('./lib/feature');
 
 /**
  *
