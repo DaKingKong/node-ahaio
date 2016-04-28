@@ -14,6 +14,8 @@ var requirement = require('./lib/requirement');
 var page = require('./lib/page');
 var customObjectRecord = require('./lib/customObjectRecord');
 var integration = require('./lib/integration');
+var integrationField = require('./lib/integrationField');
+var timeTrackingEvent = require('./lib/timeTrackingEvent');
 
 /**
  *
@@ -58,6 +60,8 @@ function Client(username, password, subdomain, options) {
     Client.prototype.page = page(this);
     Client.prototype.customObjectRecord = customObjectRecord(this);
     Client.prototype.integration = integration(this);
+    Client.prototype.integrationField = integrationField(this);
+    Client.prototype.timeTrackingEvent = timeTrackingEvent(this);
 
 }
 
@@ -138,6 +142,15 @@ Client.prototype.put = function(path, body, callback) {
     }
 
     return this._request('PUT', path, null, body, callback);
+};
+
+Client.prototype.delete = function(path, body, callback) {
+    if (_.isFunction(body)) {
+        callback = body;
+        body = {};
+    }
+
+    return this._request('DELETE', path, null, body, callback);
 };
 
 module.exports = Client;
