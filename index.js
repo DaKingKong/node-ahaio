@@ -76,8 +76,6 @@ Client.prototype._request = function (method, path, params, body, callback){
         auth: client.auth
     };
 
-    console.log(options);
-
     if (client.options && client.options.timeout) {
         options.timeout = client.options.timeout
     }
