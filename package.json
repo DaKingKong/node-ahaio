@@ -1,15 +1,27 @@
 {
-  "name": "node-ahaio",
-  "version": "1.0.0",
+  "name": "aha-io",
+  "version": "0.0.4",
   "description": "A node wrapper for Aha.io's REST API",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha"
+    "test": "mocha"
   },
   "keywords": [
-    "aha.io"
+    "aha",
+    "aha.io",
+    "project management"
   ],
-  "author": "Alex Gandy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexgandy/node-ahaio"
+  },
+  "author": "Alex Gandy <alexgandy@gmail.com>",
+  "contributors": [
+    {
+      "name": "Alex Gandy",
+      "email": "alexgandy@gmail.com"
+    }
+  ],
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.11.1",

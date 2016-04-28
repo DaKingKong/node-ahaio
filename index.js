@@ -18,7 +18,6 @@ var integrationField = require('./lib/integrationField');
 var timeTrackingEvent = require('./lib/timeTrackingEvent');
 
 /**
- *
  * @param {string} username
  * @param {string} password
  * @param {string} subdomain - AHA Subdomain/Company Name (http://subdomain.aha.io)
