@@ -6,6 +6,13 @@ const _ = require('lodash');
 var product = require('./lib/product');
 var release = require('./lib/release');
 var feature = require('./lib/feature');
+var task = require('./lib/task');
+var note = require('./lib/note');
+var idea = require('./lib/idea');
+var initiative = require('./lib/initiative');
+var requirement = require('./lib/requirement');
+var page = require('./lib/page');
+var customObjectRecord = require('./lib/customObjectRecord');
 
 /**
  *
@@ -42,6 +49,14 @@ function Client(username, password, subdomain, options) {
     Client.prototype.product = product(this);
     Client.prototype.release = release(this);
     Client.prototype.feature = feature(this);
+    Client.prototype.task = task(this);
+    Client.prototype.note = note(this);
+    Client.prototype.idea = idea(this);
+    Client.prototype.initiative = initiative(this);
+    Client.prototype.requirement = requirement(this);
+    Client.prototype.page = page(this);
+    Client.prototype.customObjectRecord = customObjectRecord(this);
+
 }
 
 Client.prototype._request = function (method, path, params, body, callback){
