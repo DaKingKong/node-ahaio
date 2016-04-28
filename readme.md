@@ -9,11 +9,11 @@ A special thanks to Matt McClure (@mmcc) and [Ryan Faerman](@ryanfaerman). This 
 
 Install the NPM package
 
-    $ npm install ahaio
+    $ npm install aha-io --save
 
 Require the package in your application
 
-    var AhaIo = require('ahaio');
+    var AhaIo = require('aha-io');
 
 Instantiate a new client. Currently the wrapper uses basic HTTP authentication, so this requires a `username`, `password`, your AHA `subdomain` and an optional `options` object. In the options you can pass `{useSubdomain: false}` if you want to use `secure.aha.io` subdomain instead of `your-subdomain.aha.io`.
 
@@ -24,4 +24,6 @@ You can also use AHA's `secure.aha.io`. The subdomain is *always* required for a
 
     var client = AhaIO('username', 'password', 'subdomain', { useSubdomain: false });
 
-### [Routes Implemented](./implemented-routes.md)
+### This is still a work in progress, and pull requests are appreciated
+
+[Routes Implemented](./implemented-routes.md)
