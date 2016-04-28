@@ -1,0 +1,127 @@
+### IMPLEMENTED ROUTES
+
+- [x] GET /api/v1/products/:product_id/comments
+- [x] GET /api/v1/comments/:id
+- [x] GET /api/v1/products/:product_id/features
+- [x] GET /api/v1/features
+- [x] GET /api/v1/products/:product_id/features
+- [x] GET /api/v1/features
+- [x] GET /api/v1/features
+- [x] GET /api/v1/features/:id
+- [x] GET /api/v1/releases/:release_id/features
+- [x] GET /api/v1/features
+- [x] GET /api/v1/products/:product_id/idea_categories
+- [x] GET /api/v1/ideas/:idea_id/endorsements
+- [x] GET /api/v1/ideas/:idea_id/subscriptions
+- [x] GET /api/v1/products/:product_id/ideas
+- [x] GET /api/v1/ideas/:id
+- [x] GET /api/v1/ideas/related
+- [x] GET /api/v1/ideas
+- [x] GET /api/v1/products/:product_id/ideas
+- [x] GET /api/v1/ideas
+- [x] GET /api/v1/initiatives/:id
+- [x] GET /api/v1/products/:product_id/initiatives
+- [x] GET /api/v1/requirements/:id
+- [x] GET /api/v1/requirements/:requirement_id/tasks
+- [x] GET /api/v1/pages/:id
+- [x] GET /api/v1/products/:product_id/integrations
+- [x] GET /api/v1/products/:product_id/pages
+- [x] GET /api/v1/products/:id
+- [x] GET /api/v1/releases/:id
+- [x] GET /api/v1/products/:product_id/releases
+- [x] GET /api/v1/releases
+- [x] GET /api/v1/releases/:release_id/tasks
+- [x] GET /api/v1/tasks/:id
+- [x] GET /api/v1/features/:feature_id/tasks
+- [x] GET /api/v1/products/:product_id/users
+- [x] GET /api/v1/ideas/:idea_id/tasks
+- [x] GET /api/v1/custom_object_records/:id
+- [x] GET /api/v1/products/:product_id/integrations/:integration_id
+- [x] GET /api/v1/products/:product_id/integrations/:service_name (DEPRECATED)
+- [x] GET /api/v1/products/:product_id/custom_objects/:key/records
+- [x] GET /api/v1/idea_portals/:idea_portal_id/portal_users
+- [x] GET /api/v1/idea_portals/:idea_portal_id/portal_users/:id
+- [x] GET /api/v1/features/:feature_id/integrations/:integration_id/fields/:field_name
+- [x] GET /api/v1/integrations/:integration_id/fields/:field_name/value/:field_value
+
+- [x] POST /api/v1/comments/:comment_id/attachments
+- [ ] POST /api/v1/comments/:comment_id/attachments
+- [ ] POST /api/v1/custom_fields/:custom_field_id/attachments
+- [ ] POST /api/v1/features/:feature_id/integrations/:service_name/fields
+- [ ] POST /api/v1/features/:feature_id/integrations/:service_name/fields
+- [ ] POST /api/v1/features/:feature_id/requirements
+- [ ] POST /api/v1/features/:feature_id/integrations/:integration_id/fields
+- [ ] POST /api/v1/features/:feature_id/integrations/:integration_id/fields
+- [ ] POST /api/v1/features/:feature_id/comments
+- [ ] POST /api/v1/ideas/:idea_id/idea_comments
+- [ ] POST /api/v1/ideas/:idea_id/endorsements
+- [ ] POST /api/v1/ideas/:idea_id/endorsements
+- [ ] POST /api/v1/ideas/:idea_id/subscriptions
+- [ ] POST /api/v1/ideas/:idea_id/subscriptions
+- [ ] POST /api/v1/ideas/:idea_id/comments
+- [ ] POST /api/v1/idea_endorsements/:idea_endorsement_id/integrations/:integration_id/fields
+- [ ] POST /api/v1/idea_portals/:idea_portal_id/portal_users
+- [ ] POST /api/v1/idea_portals/:idea_portal_id/portal_users
+- [ ] POST /api/v1/notes/:note_id/attachments
+- [ ] POST /api/v1/products
+- [ ] POST /api/v1/products/:product_id/initiatives
+- [ ] POST /api/v1/products/:product_id/integrations
+- [ ] POST /api/v1/products/:product_id/pages
+- [ ] POST /api/v1/products/:product_id/releases
+- [ ] POST /api/v1/products/:product_id/releases
+- [ ] POST /api/v1/products/:product_id/users
+- [ ] POST /api/v1/products/:product_id/users
+- [ ] POST /api/v1/products/:product_id/users
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/ideas
+- [ ] POST /api/v1/products/:product_id/custom_objects/:key/records
+- [ ] POST /api/v1/project/:project_id/strategic_imperatives
+- [ ] POST /api/v1/releases/:release_id/features
+- [ ] POST /api/v1/releases/:release_id/features
+- [ ] POST /api/v1/releases/:release_id/features
+- [ ] POST /api/v1/releases/:release_id/features
+- [ ] POST /api/v1/releases/:release_id/features
+- [ ] POST /api/v1/requirements/:requirement_id/comments
+- [ ] POST /api/v1/tasks/:task_id/attachments
+
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/custom_object_records/:id
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/features/:id
+- [ ] PUT /api/v1/ideas/:id
+- [ ] PUT /api/v1/ideas/:id
+- [ ] PUT /api/v1/ideas/:id
+- [ ] PUT /api/v1/products/:product_id/initiatives/:id
+- [ ] PUT /api/v1/pages/:id
+- [ ] PUT /api/v1/idea_portals/:idea_portal_id/portal_users/:id
+- [ ] PUT /api/v1/idea_portals/:idea_portal_id/portal_users/:id
+- [ ] PUT /api/v1/idea_portals/:idea_portal_id/portal_users/:id
+- [ ] PUT /api/v1/products/:id
+- [ ] PUT /api/v1/products/:product_id/releases/:id
+- [ ] PUT /api/v1/requirements/:id
+- [ ] PUT /api/v1/products/:product_id/users/:id
+- [ ] PUT /api/v1/tasks/:id
+- [ ] PUT /api/v1/tasks/:id
+
+- [x] DELETE /api/v1/features/:id
+- [x] DELETE /api/v1/custom_object_records/:id
+- [x] DELETE /api/v1/ideas/:id
+- [x] DELETE /api/v1/integration_fields/:id
+- [x] DELETE /api/v1/pages/:id
+- [x] DELETE /api/v1/requirements/:id
+- [x] DELETE /api/v1/tasks/:id
+- [x] DELETE /api/v1/products/:product_id/releases/:id
+- [x] DELETE /api/v1/products/:product_id/initiatives/:id
+- [x] DELETE /api/v1/time_tracking_events/:id
+- [x] DELETE /api/v1/ideas/:idea_id/endorsements/:id
+- [x] DELETE /api/v1/ideas/:idea_id/subscriptions/:id

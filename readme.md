@@ -23,3 +23,5 @@ Instantiate a new client. Currently the wrapper uses basic HTTP authentication, 
 You can also use AHA's `secure.aha.io`. The subdomain is *always* required for authentication purposes.
 
     var client = AhaIO('username', 'password', 'subdomain', { useSubdomain: false });
+
+### [Routes Implemented](./implemented-routes.md)
