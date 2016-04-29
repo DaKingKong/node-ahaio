@@ -52,13 +52,13 @@
 - [ ] POST /api/v1/features/:feature_id/requirements
 - [ ] POST /api/v1/features/:feature_id/integrations/:integration_id/fields
 - [ ] POST /api/v1/features/:feature_id/integrations/:integration_id/fields
-- [ ] POST /api/v1/features/:feature_id/comments
+- [x] POST /api/v1/features/:feature_id/comments
 - [ ] POST /api/v1/ideas/:idea_id/idea_comments
 - [ ] POST /api/v1/ideas/:idea_id/endorsements
 - [ ] POST /api/v1/ideas/:idea_id/endorsements
 - [ ] POST /api/v1/ideas/:idea_id/subscriptions
 - [ ] POST /api/v1/ideas/:idea_id/subscriptions
-- [ ] POST /api/v1/ideas/:idea_id/comments
+- [x] POST /api/v1/ideas/:idea_id/comments
 - [ ] POST /api/v1/idea_endorsements/:idea_endorsement_id/integrations/:integration_id/fields
 - [ ] POST /api/v1/idea_portals/:idea_portal_id/portal_users
 - [ ] POST /api/v1/idea_portals/:idea_portal_id/portal_users
@@ -88,7 +88,7 @@
 - [ ] POST /api/v1/releases/:release_id/features
 - [ ] POST /api/v1/releases/:release_id/features
 - [ ] POST /api/v1/releases/:release_id/features
-- [ ] POST /api/v1/requirements/:requirement_id/comments
+- [x] POST /api/v1/requirements/:requirement_id/comments
 - [ ] POST /api/v1/tasks/:task_id/attachments
 
 - [ ] PUT /api/v1/features/:id
