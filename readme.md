@@ -3,7 +3,7 @@ Aha.io API Wrapper
 
 NPM package for interacting with the [AHA.io](https://aha.io) API.
 
-A special thanks to Matt McClure (@mmcc) and [Ryan Faerman](@ryanfaerman). This code was heavily inspired, based on and out-right copied from their (super clean and amazing) Zencoder API wrapper.
+A special thanks to Matt McClure ([@mmcc](https://github.com/mmcc)) and Ryan Faerman ([@ryanfaerman](https://github.com/ryanfaerman)). This code was heavily inspired, based on and out-right copied from their (super clean and amazing) Zencoder API wrapper.
 
 ### Getting Started
 
