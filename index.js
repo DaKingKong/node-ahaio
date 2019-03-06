@@ -26,24 +26,42 @@ var timeTrackingEvent = require('./lib/timeTrackingEvent');
  */
 function Client(username, password, subdomain, options) {
     if (!(this instanceof Client)) {
-        return new Client(username, password, subdomain, options);
+	return new Client(username, password, subdomain, options);
     }
-
-    this.options = options || { useSubdomain: true, timeout: null };
-    this.username = username;
-    this.password = password;
-    this.subdomain = subdomain;
+    var argmap;
+    if (typeof username === "string") {
+	argmap = {
+	    "username": username,
+	    "password": password,
+	    "subdomain": subdomain,
+	    "options": options
+	}
+    } else if (typeof username === "object") {
+	argmap = username
+    }
+    if ('username' in argmap) {
+	this.username = argmap.username;
+	this.password = argmap.password;
+	this.auth = {
+            user: this.username,
+            pass: this.password
+	};
+    } else if ('token' in argmap) {
+	this.token = argmap.token;
+	this.auth = {
+            token: this.token
+	}; 
+    } else {
+	// This should never happen.
+    }
+    this.options = argmap.options || { useSubdomain: true, timeout: null };
+    this.subdomain = argmap.subdomain;
 
     this.requestDefaultHeaders = {};
 
     if (this.options.useSubdomain === false) {
         this.requestDefaultHeaders['X-AHA-ACCOUNT'] = this.subdomain;
         this.subdomain = 'secure';
-    };
-
-    this.auth = {
-        user: this.username,
-        pass: this.password
     };
 
     this.baseUrl = `https://${this.subdomain}.aha.io/api/v1`;
@@ -66,23 +84,23 @@ function Client(username, password, subdomain, options) {
 
 Client.prototype._request = function (method, path, params, body, callback){
     var client = this;
-
     var options = {
         method: method,
         qs: params,
         uri: client.baseUrl + path,
-        json: body,
-        auth: client.auth
+        json: body
     };
-
+    if (typeof client.token !== 'undefined') {
+	options.auth = { 'bearer' : client.token }
+    } else if (typeof client.username !== 'undefined') {
+	options.auth = { 'username' : client.username, 'password' : client.password }
+    } else {
+	// no auth?
+    }
     if (client.options && client.options.timeout) {
         options.timeout = client.options.timeout
     }
-
-    //Prepare request headers
     options.headers = client.requestDefaultHeaders;
-
-    //Initiate HTTP request
     request(options, function (err, response, body){
         var data;
         if (callback) {
@@ -95,19 +113,16 @@ Client.prototype._request = function (method, path, params, body, callback){
                     data = body;
                 }
             }
-
             //request doesn't think 4xx is an error - we want an error for any non-2xx status codes
             //we also we want this to be a real error object...
             if (!err && (response.statusCode < 200 || response.statusCode > 206)){
                 err = new Error('HTTP request error.');
                 err.code = response.statusCode;
             }
-
             if(err && typeof err === 'string') {
                 err = new Error(err);
                 err.code = response.statusCode;
             }
-
             callback(err, data, response);
         }
         return this;

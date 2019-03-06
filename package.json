@@ -1,6 +1,6 @@
 {
   "name": "aha-io",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A node wrapper for Aha.io's REST API",
   "main": "index.js",
   "scripts": {
