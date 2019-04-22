@@ -6,10 +6,6 @@
   "scripts": {
     "test": "mocha"
   },
-//  "engines": {
-//    "node": "6.0.0",
-//    "npm": "3.8.6"
-//  },
   "keywords": [
     "aha",
     "aha.io",
