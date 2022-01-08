@@ -12,6 +12,7 @@ var idea = require('./lib/idea');
 var initiative = require('./lib/initiative');
 var requirement = require('./lib/requirement');
 var page = require('./lib/page');
+var workflow = require('./lib/workflow');
 var customObjectRecord = require('./lib/customObjectRecord');
 var integration = require('./lib/integration');
 var integrationField = require('./lib/integrationField');
@@ -79,6 +80,7 @@ function Client(username, password, subdomain, options) {
     Client.prototype.integration = integration(this);
     Client.prototype.integrationField = integrationField(this);
     Client.prototype.timeTrackingEvent = timeTrackingEvent(this);
+    Client.prototype.workflow = workflow(this);
 
 }
 
